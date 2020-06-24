@@ -348,9 +348,9 @@ class RegisterPage(tk.Frame):
             if not re.match(r"^\d{9}$", phone):
                 raise ValueError("Invalid telephone number :: 654236123")
 
-        def adress_validation(adress):
-            if not re.match(r"^[a-zA-Z1-9\ \,\.-]+$", adress):
-                raise ValueError("Invalid adress")
+#         def adress_validation(adress):
+#             if not re.match(r"^[a-zA-Z1-9\ \,\.-]+$", adress):
+#                 raise ValueError("Invalid adress")
 
 
         if self.error_label:
@@ -360,7 +360,7 @@ class RegisterPage(tk.Frame):
             second_name_validation(self.second_name_entry.get())
             email_validation(self.email_entry.get())
             phone_validation(self.phone_entry.get())
-            adress_validation(self.adress_entry.get())
+#             adress_validation(self.adress_entry.get())
 
         except ValueError as err:
             self.error_label = tk.Label(self, text=err, background='#FF9966')
